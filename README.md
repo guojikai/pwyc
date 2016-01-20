@@ -1,42 +1,33 @@
-Smeller
-=======
-A Browser inspection tool,written by PHP.一个PHP写的浏览器检测工具，获取访客的操作系统、硬件类型、浏览器等信息。
+Pwyc
+======
+以前流行的最简单的PHP伪原创类，基于词典的同义词替换，现在用不到了。
 
-Installation
-------------
-Install the latest stable version using composer:
+安装
+----
+使用 Composer 安装：
 
 ```
-composer require guojikai/smell
+composer require guojikai/pwyc
 ```
-And require composer autoload file in your index file: (eg. index.php)
+在入口文件引入 Composer 启动脚本： (eg. index.php)
 
 ```php
 require 'vendor/autoload.php';
 ```
 
-Usege
------
+使用
+----
 ```php
 <?php
 
-use Smeller\Smeller;
+use Pwyc\Pwyc;
 
-$array = Smeller::smell(); 
+$new_text = Pwyc::replace('需要被替换的原文');
 
-var_dump($array);
+var_dump($new_text);
+
+//输出替换后的文本
 
 ?>
-```
-
-output：
-
-```php
-array:4 [
-  "device" => "pc"
-  "os" => "mac"
-  "browser" => "chrome"
-  "version" => 0
-]
 ```
 
