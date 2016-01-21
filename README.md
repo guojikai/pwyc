@@ -22,11 +22,12 @@ require 'vendor/autoload.php';
 
 use Pwyc\Pwyc;
 
-$new_text = Pwyc::replace('需要被替换的原文');
+$pwyc = new Pwyc;
+$new_text = $pwyc->replace('需要被替换的原文');
 
 var_dump($new_text);
 
-//输出替换后的文本
+//string(24) "须要被调换的原文"
 
 ?>
 ```
